@@ -213,7 +213,7 @@ article .gallery .prev:before,
 article .gallery .next:before {
   position: absolute;
   font: 24px/1 FontAwesome;
-  text-align: left;
+  text-align: center;
   width: 24px;
   text-shadow: 0 0 15px rgba(0,0,0,0.5);
   color: #fff;
@@ -274,7 +274,7 @@ article header .title a:hover {
   text-decoration: none;
 }
 article .entry {
-  text-align: justify;
+  text-align: left;
   line-height: 1.6;
 }
 article .entry p,
