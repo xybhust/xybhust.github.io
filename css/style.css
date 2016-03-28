@@ -213,7 +213,7 @@ article .gallery .prev:before,
 article .gallery .next:before {
   position: absolute;
   font: 24px/1 FontAwesome;
-  text-align: center;
+  text-align: left;
   width: 24px;
   text-shadow: 0 0 15px rgba(0,0,0,0.5);
   color: #fff;
