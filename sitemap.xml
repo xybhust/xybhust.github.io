@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.yibingxie.com/2016/03/28/quick-sort/</loc>
+    
+    <lastmod>2016-03-30T07:38:55.498Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.yibingxie.com/2016/03/30/merge-sort/</loc>
     
-    <lastmod>2016-03-30T07:36:47.831Z</lastmod>
+    <lastmod>2016-03-30T07:38:53.687Z</lastmod>
     
   </url>
   
@@ -12,13 +19,6 @@
     <loc>http://blog.yibingxie.com/2016/03/27/hello-world/</loc>
     
     <lastmod>2016-03-29T01:15:44.793Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.yibingxie.com/2016/03/28/quick-sort/</loc>
-    
-    <lastmod>2016-03-28T07:08:25.697Z</lastmod>
     
   </url>
   
