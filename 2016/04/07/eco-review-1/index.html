@@ -73,7 +73,7 @@
     <div class="entry">
       
         <p>This chapter deals with simple linear regression.<br><a id="more"></a></p>
-<h2 id="Assumptions-for-simple-linear-regression"><a href="#Assumptions-for-simple-linear-regression" class="headerlink" title="Assumptions for simple linear regression"></a>Assumptions for simple linear regression</h2><p><strong>SR1.</strong> The value of $y$, for each value of $x$, is<br>$$ y = \beta_1 + \beta_2x + e $$</p>
+<h2 id="The-Simple-Linear-Regression-Model"><a href="#The-Simple-Linear-Regression-Model" class="headerlink" title="The Simple Linear Regression Model"></a>The Simple Linear Regression Model</h2><p><strong>GAUSS–MARKOV ASSUMPTION:</strong><br><strong>SR1.</strong> The value of $y$, for each value of $x$, is<br>$$ y = \beta_1 + \beta_2x + e $$</p>
 <p><strong>SR2.</strong> The expected value of the random error $e$ is<br>$$ E\left(e \right ) = 0 $$<br>which is equivalent to assuming that<br>$$ E\left(y \right) = \beta_1 + \beta_2x $$</p>
 <p><strong>SR3.</strong> The variance of the random error $e$ is<br>$$ \text{var}\left(e \right ) = \sigma^2 = \text{var}\left(y \right ) $$</p>
 <p><strong>SR4.</strong> The covariance between any pair of random errors $e_i$ and $e_j$ is<br>$$ \text{cov}\left(e_i, e_j \right ) = \text{cov}\left(y_i, y_j \right ) = 0 $$</p>
@@ -92,8 +92,8 @@
 <p>One-tail T test with alternative “greater than”: reject null hypothesis if $t \geq t_{\left(1 - \alpha, N - 2 \right )}$.<br>One-tail T test with alternative “smaller than”: reject null hypothesis if $t \leq t_{\left(1 - \alpha, N - 2 \right )}$.<br>Two-tail T test with alternative “not equal to”: reject null hypothesis if $t \leq t_{\left(\alpha/2, N - 2 \right )}$ or $t \geq t_{\left(1 - \alpha/2, N - 2 \right )}$.</p>
 <p><strong>$p$-VALUE RULE:</strong> Reject the null hypothesis when the $p$-value is less than, or equal to, the level of significance a. That is, if $p \leq a$ then reject H0. If $p &gt; a$ then do not reject $H_0$.</p>
 <p>$p$-value is the probability of the alternative hypothesis.</p>
-<p><strong>Testing linear combination of parameters:</strong><br>Suppose $\hat{\lambda} = c_1b_1 + c_2b_2$, then<br>$$ \text{var}\left(\hat{\lambda} \right ) = c_1^2\text{var}\left(b_1 \right ) + c_2^2\text{var}\left(b_2 \right ) + 2c_1c_2\text{cov}\left(b_1, b_2 \right ) $$<br>Replacing the unknown variance gives<br>$$ \widehat{\text{var}\left(\hat{\lambda} \right )} = c_1^2\widehat{\text{var}\left(b_1 \right )} + c_2^2\widehat{\text{var}\left(b_2 \right )} + 2c_1c_2\widehat{\text{cov}\left(b_1, b_2 \right )} $$</p>
-
+<p><strong>Testing linear combination of parameters:</strong><br>Suppose $\hat{\lambda} = c_1b_1 + c_2b_2$, then<br>$$ \text{var}\left(\hat{\lambda} \right ) = c_1^2\text{var}\left(b_1 \right ) + c_2^2\text{var}\left(b_2 \right ) + 2c_1c_2\text{cov}\left(b_1, b_2 \right ) $$<br>Replacing the unknown variance gives<br>$$ \widehat{\text{var}\left(\hat{\lambda} \right )} = c_1^2\widehat{\text{var}\left(b_1 \right )} + c_2^2\widehat{\text{var}\left(b_2 \right )} + 2c_1c_2\widehat{\text{cov}\left(b_1, b_2 \right )} $$<br>and<br>$$ \text{se}\left(\hat{\lambda} \right ) = \sqrt{\widehat{\text{var}\left(c_1b_1 + c_2b_2 \right )}} $$</p>
+<h2 id="Prediction-go"><a href="#Prediction-go" class="headerlink" title="Prediction, go"></a>Prediction, go</h2>
       
     </div>
     <footer>
