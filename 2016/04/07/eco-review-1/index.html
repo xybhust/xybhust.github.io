@@ -74,11 +74,15 @@
       
         <p>From now on I’m going to write a review series of Econometrics. This is not going to be a tutorial teaching you econometrics, instead, it assumes you already have a decent knowledge of what econometrics is and only serves as a cheat sheet.<br><a id="more"></a></p>
 <h3 id="Assumptions-for-simple-linear-regression"><a href="#Assumptions-for-simple-linear-regression" class="headerlink" title="Assumptions for simple linear regression"></a>Assumptions for simple linear regression</h3><p>SR1. The value of $y$, for each value of $x$, is<br>$$ y = \beta_1 + \beta_2x + e $$</p>
-<p>SR2. The expected value of the random error $e$ is<br>$$ E\left(e \right ) = 0 $$<br>   which is equivalent to assuming that<br>$$ E\left(y \right) = \beta_1 + \beta_2x $$</p>
-<p>SR3. The variance of the random error e is<br>$$ \text{var}\left(e \right ) = \sigma^2 = \text{var}\left(y \right ) $$</p>
+<p>SR2. The expected value of the random error $e$ is<br>$$ E\left(e \right ) = 0 $$<br>which is equivalent to assuming that<br>$$ E\left(y \right) = \beta_1 + \beta_2x $$</p>
+<p>SR3. The variance of the random error $e$ is<br>$$ \text{var}\left(e \right ) = \sigma^2 = \text{var}\left(y \right ) $$</p>
 <p>SR4. The covariance between any pair of random errors $e_i$ and $e_j$ is<br>$$ \text{cov}\left(e_i, e_j \right ) = \text{cov}\left(y_i, y_j \right ) = 0 $$</p>
 <p>SR5. The variable $x$ is not random and must take at least two different values.</p>
-<p>SR6. (optional) The values of $e$ are normally distributed about their mean<br>$$ e \sim N\left(0, \sigma^2 \right ) $$<br>   if the values of $y$ are normally distributed, and vice versa.</p>
+<p>SR6. (optional) The values of $e$ are normally distributed about their mean<br>$$ e \sim N\left(0, \sigma^2 \right ) $$<br>if the values of $y$ are normally distributed, and vice versa.</p>
+<h3 id="The-least-square-estimator"><a href="#The-least-square-estimator" class="headerlink" title="The least square estimator"></a>The least square estimator</h3><p>$$ b_2 = \frac{\sum{\left(x_i-\bar{x} \right )\left(y_i-\bar{y} \right )}}{\sum{\left(x_i-\bar{x} \right )^2}} $$<br>$$ b_1 = \bar{y} - b_2\bar{x} $$</p>
+<p>As long as $E\left(e \right ) = 0$ is satisfied, then both $b_1$ and $b_2$ are unbiased estimators.</p>
+<p>$$ \text{var}\left(b_1 \right ) = \sigma^2\left[\frac{\sum{x_i^2}}{N\sum\left(x_i - \bar{x} \right )^2} \right ] $$<br>$$ \text{var}\left(b_2 \right ) = \frac{\sigma^2}{\sum{\left(x_i - \bar{x} \right )^2}} $$<br>$$ \text{cov}\left(b_1, b_2 \right ) = \sigma^2\left[\frac{-\bar{x}}{\sum{\left(x_i - \bar{x} \right )^2}} \right ] $$<br>The proof of above relies on the assumption $\text{var}\left(e \right ) = \sigma^2$ and $\text{cov}\left(e_i, e_j \right ) = 0$.</p>
+<p><strong>GAUSS–MARKOV THEOREM:</strong> Under the assumptions SR1–SR5 of the linear regression model, the estimators $b_1$ and $b2$ have the smallest variance of all linear and unbiased estimators of $b_1$ and $b_2$. They are the best linear unbiased estimators (BLUE) of $b_1$ and $b_2$.</p>
 
       
     </div>
