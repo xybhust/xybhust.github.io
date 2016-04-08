@@ -91,6 +91,16 @@
 <p><strong>Akaike information criterion (AIC):</strong><br>$$ AIC = \text{ln}\left(\frac{SSE}{N} \right ) + \frac{2K}{N} $$</p>
 <p><strong>Bayesian information criterion (BIC):</strong><br>$$ BIC = \text{ln}\left(\frac{SSE}{N} \right) + \frac{K\text{ln}\left(N \right)}{N} $$<br>The model with the smallest AIC, or the smallest BIC, is preferred.</p>
 <p>However, using $AIC$ when n is not many times larger than $K^2$ might cause overfitting, hence we have $AICc$ criteria as follows:<br>$$ AICc = AIC + \frac{2K\left(K + 1 \right )}{N - K - 1} $$<br>If n is many times larger than $K^2$, then the difference becomes negligible.</p>
+<p><strong>RESET for model misspecification:</strong> RESET (REgression Specification Error Test) is designed to detect omitted variables and incorrect functional form.<br>Suppose we have identified the following form:<br>$$ \hat{y} = b_1 + b_2x_x + b_3x_3 $$<br>Then, consider the following model:<br>$$ y = \beta_1 + \beta_2x_2 + \beta_3x_3 + \gamma_1\hat{y}^2 + \gamma_1\hat{y}^3 $$<br>And use $F$-test to test whether $\gamma_1$ and $\gamma_1$ are significant. The reason behind this is that Since polynomials can approximate many different kinds of functional forms, if the original functional form is not correct, the polynomial approximation that includes $hat{y}^2$ and $hat{y}^3$ may significantly improve the fit of the model.</p>
+<h2 id="Collinearity"><a href="#Collinearity" class="headerlink" title="Collinearity"></a>Collinearity</h2><p>Collinearity refers to a linear relationship between two explanatory variables. In general, whenever there are one or more <strong>exact linear relationships</strong> among the explanatory variables, then the condition of exact collinearity exists. In this case the least squares estimator is not defined.</p>
+<p>The more usual case is one in which correlations between explanatory variables might be high, but not exactly one, these circumstances <strong>do not</strong> constitute a violation of least squares assumptions. By the <strong>Gauss–Markov theorem</strong>, the least squares estimator is still the best linear unbiased estimator. However, the variance of the coefficients will be large, which increase the standard error, as a result, it is likely that the usual t-tests will lead to the conclusion that parameter estimates are not significantly different from zero.</p>
+<p><strong>IDENTIFYING AND MITIGATING COLLINEARITY:</strong><br>One simple way to detect collinear relationships is to use <strong>sample correlation coefficients</strong> between pairs of explanatory variables.</p>
+<p>In cases where collinearity involves multiple variables, run linear regression on these variables:<br>$$ x_2 = a_1x_1 + \cdots + a_Kx_X + e $$<br>If the $R^2$ is high, then the implication is that a large portion of the variation in $x_2$ is explained by variation in the other explanatory variables.</p>
+<p>The collinearity problem is that the data <strong>do not contain enough “information”</strong> about the individual effects of explanatory variables to permit us to estimate all the parameters of the statistical model precisely.</p>
+<ol>
+<li>Take more, and better, sample data.</li>
+<li>Drop the variable which causes collinearity.</li>
+</ol>
 
       
     </div>
