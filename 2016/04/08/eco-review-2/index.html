@@ -6,7 +6,7 @@
   <title>Review of Econometrics(2) | Yibing Xie</title>
   <meta name="author" content="Yibing Xie">
   
-  <meta name="description" content="This article deals with multiple linear regression, which covers chapter 2-4 from the Principles of Econometrics 4th Edition.">
+  <meta name="description" content="This article deals with multiple linear regression, which covers chapter 5-8 from the Principles of Econometrics 4th Edition.">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -72,7 +72,7 @@
     </header>
     <div class="entry">
       
-        <p>This article deals with multiple linear regression, which covers chapter 2-4 from the <a href="http://www.amazon.com/Principles-Econometrics-R-Carter-Hill/dp/0470626739/ref=sr_1_1?ie=UTF8&amp;qid=1460072940&amp;sr=8-1&amp;keywords=econometrics+principles" target="_blank" rel="external"><em><strong>Principles of Econometrics</strong></em></a> 4th Edition.<br><a id="more"></a><br><!--Chapter 5--></p>
+        <p>This article deals with multiple linear regression, which covers chapter 5-8 from the <a href="http://www.amazon.com/Principles-Econometrics-R-Carter-Hill/dp/0470626739/ref=sr_1_1?ie=UTF8&amp;qid=1460072940&amp;sr=8-1&amp;keywords=econometrics+principles" target="_blank" rel="external"><em><strong>Principles of Econometrics</strong></em></a> 4th Edition.<br><a id="more"></a><br><!--Chapter 5--></p>
 <h2 id="The-Multiple-Regression-Model"><a href="#The-Multiple-Regression-Model" class="headerlink" title="The Multiple Regression Model"></a>The Multiple Regression Model</h2><p><strong>GAUSS–MARKOV ASSUMPTION:</strong><br><strong>MR1.</strong> $y_i = \beta_1 + \beta_2x_{i2} + \cdots + \beta_Kx_{iK} + e_i, i = 1,…,N$<br><strong>MR2.</strong> $E\left(y_i \right ) = \beta_1 + \beta_2x_{i2} + \cdots + \beta_Kx_{iK} \Leftrightarrow E\left(e_i \right ) = 0$<br><strong>MR3.</strong> $\text{var}\left(e \right ) = \sigma^2 = \text{var}\left(y \right )$<br><strong>MR4.</strong> $\text{cov}\left(e_i, e_j \right ) = \text{cov}\left(y_i, y_j \right ) = 0$<br><strong>MR5.</strong> The values of each $x_{ik}$ are not random and are not exact linear functions of the other explanatory variables.<br><strong>MR6.</strong> $y_i \sim N\left(\beta_1 + \beta_2x_{i2} + \cdots + \beta_Kx_{iK}, \sigma^2 \right ) \Leftrightarrow e_i \sim N\left(0, \sigma^2 \right )$</p>
 <p><strong>The closed form solution for OLS:</strong><br>$$ \boldsymbol{\hat{\beta} = \left(X^TX \right )^{-1}X^Ty} $$</p>
 <p><strong>The closed form solution for GLS:</strong><br>$$ \boldsymbol{\hat{\beta} = \left(X^T\Omega^{-1}X \right )^{-1}X^T\Omega^{-1}y} $$<br>where $\Omega$ is the covariance matrix of the errors.</p>
@@ -85,7 +85,7 @@
 <p><strong>If the null hypothesis is true</strong>, then the statistic $F$ has what is called an $F$-distribution with $J$ numerator degrees of freedom and $N - K$ denominator degrees of freedom. Reject the null hypothesis if $F &gt; F_c$.</p>
 <p>$F$-test can also be used to test of <strong>the overall significance of the regression model</strong>. In this case, $SSE_R = \sum{\left(y_i - \bar{y} \right )} = SST$, $SSE_U = SSE$, which gives<br>$$ F = \frac{\left(SST - SSE \right )/\left(K - 1 \right )}{SSE/\left(N - K \right )} $$</p>
 <p>When testing a single “equality” null hypothesis (a single restriction) <strong>against a “not equal to” alternative hypothesis</strong>, either a $t$-test or an $F$-test can be used; the test outcomes will be identical. This is because the square of a t random variable with df degrees of freedom is an $F$ random variable with 1 degree of freedom in the numerator and df degrees of freedom in the denominator. Namely $ t^2 = F $.</p>
-<p><strong>$F$-test for linear constraints:</strong> if the alternative hypothesis is “not equal to”, then $F$-test can be used, otherwise, $t$-test is preferred since the fact that $F = t^2$ makes it impossible to differentiate left and right tails as $t$-test does.</p>
+<p><strong>$F$-test for linear constraints:</strong> if the alternative hypothesis is “not equal to”, then $F$-test can be used, otherwise, $t$-test is preferred since the fact that $F = t^2$ makes it impossible to differentiate between left and right tails as $t$-test does.</p>
 
       
     </div>
