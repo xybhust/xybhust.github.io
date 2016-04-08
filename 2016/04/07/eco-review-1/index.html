@@ -84,7 +84,7 @@
 <p>$$ \text{var}\left(b_1 \right ) = \sigma^2\left[\frac{\sum{x_i^2}}{N\sum\left(x_i - \bar{x} \right )^2} \right ] $$<br>$$ \text{var}\left(b_2 \right ) = \frac{\sigma^2}{\sum{\left(x_i - \bar{x} \right )^2}} $$<br>$$ \text{cov}\left(b_1, b_2 \right ) = \sigma^2\left[\frac{-\bar{x}}{\sum{\left(x_i - \bar{x} \right )^2}} \right ] $$<br>The proof of above <strong>relies on the assumption</strong> $\text{var}\left(e \right ) = \sigma^2$ and $\text{cov}\left(e_i, e_j \right ) = 0$.</p>
 <p><strong>GAUSS–MARKOV THEOREM:</strong> Under the assumptions SR1–SR5 of the linear regression model, the estimators $b_1$ and $b_2$ have the smallest variance of all linear and unbiased estimators of $b_1$ and $b_2$. They are the best linear unbiased estimators (BLUE) of $b_1$ and $b_2$.</p>
 <!--Chapter 3-->
-<h2 id="Estimating-variance-of-the-error-term"><a href="#Estimating-variance-of-the-error-term" class="headerlink" title="Estimating variance of the error term"></a>Estimating variance of the error term</h2><p>$$ \hat{e_i} = y_i - \hat{y_i} = y_i - b_1 - b_2x_i $$<br>$$ \hat{\sigma}^2 = \frac{\sum{\hat{e_i}^2}}{N - 2} $$<br>where 2 is the number of parameters.</p>
+<p><strong>Estimating Variance of the error term:</strong><br>$$ \hat{e_i} = y_i - \hat{y_i} = y_i - b_1 - b_2x_i $$<br>$$ \hat{\sigma}^2 = \frac{\sum{\hat{e_i}^2}}{N - 2} $$<br>where 2 is the number of parameters.</p>
 <p>Plugging $\hat{\sigma}$ into the variance equations of $b_1$ and $b_2$ gives the standard errors, which is<br>$$ \text{se}(b_1) = \sqrt{\widehat{\text{var}\left(b_1 \right )}} $$<br>$$ \text{se}(b_2) = \sqrt{\widehat{\text{var}\left(b_2 \right )}} $$</p>
 <h2 id="Interval-Estimation"><a href="#Interval-Estimation" class="headerlink" title="Interval Estimation"></a>Interval Estimation</h2><p>Given<br>$$ b_2 \sim N\left(\beta_2, \frac{\sigma^2}{\sum{\left(x_i - \bar{x} \right )^2}} \right )$$<br>we have<br>$$ Z = \frac{b_2 - \beta_2}{\sqrt{\text{var}\left(b_2 \right )}} \sim N\left(0, 1 \right ) $$<br>Since the true value is unknown, we have<br>$$ t = \frac{b_2 - \beta_2}{\text{se}\left(b_2 \right )} \sim t_{\left(N - 2 \right )} $$</p>
 <p>The confidence interval is therefore<br>$$ P\left[b_k - t_{\left(1-\alpha/2, N-2 \right )}\text{se}\left(b_k \right ) \leq \beta_k \leq b_k + t_{\left(1-\alpha/2, N-2 \right )}\text{se}\left(b_k \right )\right ] = 1 - \alpha $$</p>
@@ -105,6 +105,16 @@
 <li>$\sum{\hat{e}_i^2}$ = sum of squares due to error = $SSE$.</li>
 </ol>
 <p>Therefore we have<br>$$ SST = SSR + SSE $$<br>And the <strong>coefficient of determination</strong>, or $R^2$ is defined to be<br>$$ R^2 = \frac{SSR}{SST} = 1 - \frac{SSE}{SST} $$</p>
+<h2 id="Modeling-Issues"><a href="#Modeling-Issues" class="headerlink" title="Modeling Issues"></a>Modeling Issues</h2><p><strong>Choose proper function form:</strong></p>
+<ol>
+<li>Linear</li>
+<li>Quadratic</li>
+<li>Cubic</li>
+<li>Log-Log</li>
+<li>Log-Linear</li>
+<li>Linear-Log</li>
+</ol>
+<p><strong>Jarque–Bera normality test</strong><br>$$ JB = \frac{N}{6}\left(S^2 + \frac{\left(K - 3 \right )^2}{4} \right ) $$<br>where $N$ is the sample size, $S$ is skewness, and $K$ is kurtosis. When the <strong>residuals</strong> are normally distributed, the Jarque–Bera statistic has a <strong>chi-squared distribution</strong> with two degrees of freedom.We reject the hypothesis of normally distributed errors if a calculated value of the statistic <strong>exceeds</strong> a critical value selected from the chi-squared distribution with two degrees of freedom.</p>
 
       
     </div>
