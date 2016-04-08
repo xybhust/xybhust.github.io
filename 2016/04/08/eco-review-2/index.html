@@ -86,6 +86,11 @@
 <p>$F$-test can also be used to test of <strong>the overall significance of the regression model</strong>. In this case, $SSE_R = \sum{\left(y_i - \bar{y} \right )} = SST$, $SSE_U = SSE$, which gives<br>$$ F = \frac{\left(SST - SSE \right )/\left(K - 1 \right )}{SSE/\left(N - K \right )} $$</p>
 <p>When testing a single “equality” null hypothesis (a single restriction) <strong>against a “not equal to” alternative hypothesis</strong>, either a $t$-test or an $F$-test can be used; the test outcomes will be identical. This is because the square of a t random variable with df degrees of freedom is an $F$ random variable with 1 degree of freedom in the numerator and df degrees of freedom in the denominator. Namely $ t^2 = F $.</p>
 <p><strong>$F$-test for linear constraints:</strong> if the alternative hypothesis is “not equal to”, then $F$-test can be used, otherwise, $t$-test is preferred since the fact that $F = t^2$ makes it impossible to differentiate between left and right tails as $t$-test does.</p>
+<h2 id="Model-Specification"><a href="#Model-Specification" class="headerlink" title="Model Specification"></a>Model Specification</h2><p>The possibilities of omitted-variable bias or inflated variances from irrelevant variables mean that it is important to specify an appropriate set of explanatory variables. One can use $t$-test and $F$-test to test different hypothesis.</p>
+<p><strong>The adjusted coefficient of determination:</strong><br>$$ \bar{R}^2 = 1 - \frac{SSE/\left(N - K \right )}{SST/\left(N - 1 \right )} $$<br>It penalizes introducing extra vairables.</p>
+<p><strong>Akaike information criterion (AIC):</strong><br>$$ AIC = \text{ln}\left(\frac{SSE}{N} \right ) + \frac{2K}{N} $$</p>
+<p><strong>Bayesian information criterion (BIC):</strong><br>$$ BIC = \text{ln}\left(\frac{SSE}{N} \right) + \frac{K\text{ln}\left(N \right)}{N} $$<br>The model with the smallest AIC, or the smallest BIC, is preferred.</p>
+<p>However, using $AIC$ when n is not many times larger than $K^2$ might cause overfitting, hence we have $AICc$ criteria as follows:<br>$$ AICc = AIC + \frac{2K\left(K + 1 \right )}{N - K - 1} $$<br>If n is many times larger than $K^2$, then the difference becomes negligible.</p>
 
       
     </div>
