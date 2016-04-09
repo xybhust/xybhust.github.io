@@ -427,6 +427,15 @@ article .entry table {
   border: 2px solid;
   min-width: 100px;
 }
+article .entry table th {
+  border: 1px solid #000;
+  border-collapse: collapse;
+}
+article .entry table td {
+  border: 1px solid #000;
+  border-collapse: collapse;
+  padding: 1px 8px 1px;
+}
 article footer {
   margin-top: 15px;
   padding-top: 10px;
