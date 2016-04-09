@@ -3,13 +3,15 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Page 2 | Yibing Xie</title>
+  <title>Review of Econometrics(1) | Yibing Xie</title>
   <meta name="author" content="Yibing Xie">
+  
+  <meta name="description" content="This article deals with time series regression, which covers chapter 2-4 from the Principles of Econometrics 4th Edition.">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="Review of Econometrics(1)"/>
   <meta property="og:site_name" content="Yibing Xie"/>
 
   
@@ -54,33 +56,40 @@
 <div class="clearfix"></div>
 </header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-  <article class="post">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
   <div class="post-content">
     <header>
       
         <div class="icon"></div>
-        <time datetime="2016-03-28T06:46:10.000Z"><a href="/2016/03/28/quick-sort/">2016-03-28</a></time>
+        <time datetime="2016-04-09T18:03:36.000Z"><a href="/2016/04/09/eco-review-3/">2016-04-09</a></time>
       
       
   
-    <h1 class="title"><a href="/2016/03/28/quick-sort/">Quicksort</a></h1>
+    <h1 class="title">Review of Econometrics(1)</h1>
   
 
     </header>
     <div class="entry">
       
-        <p>My implementation of Quicksort algorithm.<br>
+        <p>This article deals with time series regression, which covers chapter 2-4 from the <a href="http://www.amazon.com/Principles-Econometrics-R-Carter-Hill/dp/0470626739/ref=sr_1_1?ie=UTF8&amp;qid=1460072940&amp;sr=8-1&amp;keywords=econometrics+principles" target="_blank" rel="external"><em><strong>Principles of Econometrics</strong></em></a> 4th Edition.<br><a id="more"></a><br><!-- Chapter 9--></p>
+<h2 id="Dynamic-Nature-of-Relationships"><a href="#Dynamic-Nature-of-Relationships" class="headerlink" title="Dynamic Nature of Relationships"></a>Dynamic Nature of Relationships</h2><ol>
+<li><strong>Distributed lag model:</strong> a dependent variable $y$ is a function of current and past values of an explanatory variable $x$.<br>$$ y_t = f\left(x_t, x_{t-1}, x_{t-2}, \cdots \right ) $$</li>
+<li><strong>Auto regressive distributed lag (ARDL) model:</strong> specify a model with a <strong>lagged dependent variable</strong> as one of the explanatory variables.<br>$$ y_t = f\left(y_{t-1}, x_t, x_{t-1}, x_{t-2}, \cdots \right ) $$</li>
+<li>modeling the continuing impact of change over several periods is <strong>via the error term</strong>.<br>$$ y_t = f\left(x_t \right ) + e_t \qquad e_t = g\left(e_{t-1} \right ) $$<br>we say the errors are <strong>serially correlated</strong> or <strong>autocorrelated</strong>.</li>
+</ol>
+
       
     </div>
     <footer>
       
         
-          <div class="alignleft">
-            <a href="/2016/03/28/quick-sort/#more" class="more-link">Read More</a>
-          </div>
         
+  
+  <div class="tags">
+    <a href="/tags/Econometrics/">Econometrics</a>
+  </div>
+
         
       
       <div class="clearfix"></div>
@@ -89,50 +98,17 @@
 </article>
 
 
+<section id="comment">
+  <h1 class="title">Comments</h1>
 
-
-  <article class="post">
   
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2016-03-27T18:40:36.000Z"><a href="/2016/03/27/hello-world/">2016-03-27</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2016/03/27/hello-world/">Nice to meet you</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>Welcome to my blog! This is where I’m going to share my study notes, code implementations as well as whatever blowing my mind. Comments and advices are deeply appreciated, if any. </p>
-<p>See you later.</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </div>
-</article>
-
-
-
-
-
-<nav id="pagination">
   
-    <a href="/" class="alignleft prev">Prev</a>
-  
-  
-  <div class="clearfix"></div>
-</nav></div></div>
+</section>
+
+</div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
@@ -180,7 +156,7 @@ var disqus_shortname = 'yibingxie';
   var dsq = document.createElement('script');
   dsq.type = 'text/javascript';
   dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 }());
 </script>
