@@ -3,13 +3,15 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Algorithms | Yibing Xie</title>
+  <title>Dynamic asset allocation - a Monte Carlo approach | Yibing Xie</title>
   <meta name="author" content="Yibing Xie">
+  
+  <meta name="description" content="This artical provides a possible python implementation of the paper by Riccardo Cesari and David Cremonini(2003).">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="Dynamic asset allocation - a Monte Carlo approach"/>
   <meta property="og:site_name" content="Yibing Xie"/>
 
   
@@ -54,37 +56,54 @@
 <div class="clearfix"></div>
 </header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-<h2 class="archive-title tag">Algorithms</h2>
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2016-04-09T02:21:51.000Z"><a href="/2016/04/08/asset-allocation/">2016-04-08</a></time>
+      
+      
+  
+    <h1 class="title">Dynamic asset allocation - a Monte Carlo approach</h1>
+  
 
+    </header>
+    <div class="entry">
+      
+        <p>This artical provides a possible python implementation of <a href="http://www.sciencedirect.com/science/article/pii/S0165188902000520" target="_blank" rel="external">the paper</a> by <em>Riccardo Cesari</em> and <em>David Cremonini</em>(2003).<br><a id="more"></a><br>Like the original paper, this article makes an extensive simulation comparison of popular dynamic strategies of asset allocation. For each strategy, Sharpe ratio, Sortino ratio, risk-adjusted return, etc. are calculated for evaluation. The strategies are compared in different market situations (bull, bear, no-trend markets) and with different market volatility, taking into account transaction costs and discrete rebalancing of portfolios. Finally, I verified the author’s conclusion that constant proportion strategy is dominant in bear and no-trend markets. Moreover, these results are independent of the volatility level and the risk-adjusted measure adopted. Hopefully this will give some implication to the investors.</p>
+<p>and</p>
 
-  <div class="archive">
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <div class="icon"></div>
-            <time datetime="2016-03-30T07:32:33.000Z"><a href="/2016/03/30/merge-sort/">2016-03-30</a></time>
-            
-              <h1 class="title"><a href="/2016/03/30/merge-sort/">Merge Sort</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <div class="icon"></div>
-            <time datetime="2016-03-28T06:46:10.000Z"><a href="/2016/03/28/quick-sort/">2016-03-28</a></time>
-            
-              <h1 class="title"><a href="/2016/03/28/quick-sort/">Quicksort</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
+      
+    </div>
+    <footer>
+      
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/Research/">Research</a>
   </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">Comments</h1>
+
+  
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+  
+</section>
+
 </div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
@@ -133,7 +152,7 @@ var disqus_shortname = 'yibingxie';
   var dsq = document.createElement('script');
   dsq.type = 'text/javascript';
   dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 }());
 </script>
