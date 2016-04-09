@@ -104,8 +104,13 @@
 <li>The least squares estimator is <strong>still a linear unbiased</strong> estimator, but it is <strong>no longer best</strong>. If we are able to correctly model the autocorrelated errors, then there exists an alternative estimator with a lower variance.</li>
 <li>The formulas for the <strong>standard errors</strong> usually computed for the least squares estimator are <strong>no longer correct</strong>, and hence confidence intervals and hypothesis tests that use these standard errors may be misleading.</li>
 </ol>
-<p><strong>Solutions:</strong> Using <strong>HAC (heteroskedasticity and autocorrelation consistent) standard errors</strong>. Keep the terms which were disregarded due to assuming $\text{cov}\left(e_t, e_s \right ) = 0$. </p>
+<p><strong>Solutions:</strong> </p>
+<ol>
+<li><p>Using <strong>HAC (heteroskedasticity and autocorrelation consistent) standard errors</strong>. Keep the terms which were disregarded due to assuming $\text{cov}\left(e_t, e_s \right ) = 0$. </p>
 <p>By using HAC standard errors with least squares, we can <strong>avoid having to specify the precise nature</strong> of the autocorrelated error model that is required for an alternative estimator with a lower variance. For the HAC standard errors to be valid, we need to <strong>assume that the autocorrelations go to zero</strong> as the time between observations increases (a condition necessary for stationarity), and we need <strong>a large sample</strong>, but it is not necessary to make a precise assumption about the autocorrelated error model.</p>
+</li>
+<li>Use $ARMA(p, q)$ model to specify the form of the error term.</li>
+</ol>
 
       
     </div>
