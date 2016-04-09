@@ -103,8 +103,106 @@
 <p>The statistical hypothesis tests chosen for testing normality and independence are the <a href="https://en.wikipedia.org/wiki/Shapiro%E2%80%93Wilk_test" target="_blank" rel="external"><strong>Shapiro-Wilk test</strong></a> and the <a href="https://en.wikipedia.org/wiki/Ljung%E2%80%93Box_test" target="_blank" rel="external"><strong>Ljung-Box test</strong></a>, respectively. The Shapiro–Wilk test utilizes the null hypothesis principle to check whether a sample came from a normally distributed population while the Ljung-Box test checks whether any of a group of autocorrelations of a time series are different from zero. The details of these two tests are omitted, however, what is important to know is that the null hypothesis of the Sharpiro-Wilk test is that the population is normally distributed while the null hypothesis of the Ljung-Box test is that the data are independently distributed. </p>
 <p>The price series I choose is MSCI World index, the same as the author did. Weekly prices and log-returns are depicted in Fig. 1 and Fig 2, respectively.<br><img src="../../../../image/asset-allocation/1.jpg" alt="Fig. 1  Weekly prices of MSCI World"></p>
 <p><img src="../../../../image/asset-allocation/2.jpg" alt="Fig. 2  Weekly log-return of MSCI World"></p>
-<p>In the period January 1997 to July 1999 the Shapiro –Wilk test shows the normality of weekly returns at high significance levels for the World index.<br>Table 1  Shapiro –Wilk test<br>|Test statistic  |p-value         |<br>|:————–:|:————–:|<br>|0.9919             |0. 6412         |</p>
-<p>Moreover, the Ljung–Box test of autocorrelation shows a large degree of randomness in the weekly returns up to 24 lags (120 working days). Detail of the test and the plot of autocorrelation function is shown in Table 2 and Fig. 3.<br>Table 2  Ljung–Box test<br>|Lags    |p-value    |Lags    |p-value|<br>|:—–:|:———-|:—–:|:—–:|<br>|1    |0.5913    |13    |0.2645|<br>|2    |0.1708    |14    |0.1614|<br>|3    |0.3098    |15    |0.1938|<br>|4    |0.4572    |16    |0.2400|<br>|5    |0.5926    |17    |0.2906|<br>|6    |0.6794    |18    |0.3460|<br>|7    |0.1589    |19    |0.4072|<br>|8    |0.2276    |20    |0.4678|<br>|9    |0.2710    |21    |0.4514|<br>|10    |0.3450    |22    |0.5096|<br>|11    |0.4049    |23    |0.5103|<br>|12    |0.2065    |24    |0.5661|</p>
+<p>In the period January 1997 to July 1999 the Shapiro –Wilk test shows the normality of weekly returns at high significance levels for the World index.<br>Table 1  Shapiro –Wilk test</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Test statistic</th>
+<th style="text-align:center">p-value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0.9919</td>
+<td style="text-align:center">0. 6412</td>
+</tr>
+</tbody>
+</table>
+<p>Moreover, the Ljung–Box test of autocorrelation shows a large degree of randomness in the weekly returns up to 24 lags (120 working days). Detail of the test and the plot of autocorrelation function is shown in Table 2 and Fig. 3.<br>Table 2  Ljung–Box test</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Lags</th>
+<th style="text-align:left">p-value</th>
+<th style="text-align:center">Lags</th>
+<th style="text-align:center">p-value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:left">0.5913</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">0.2645</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:left">0.1708</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">0.1614</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:left">0.3098</td>
+<td style="text-align:center">15</td>
+<td style="text-align:center">0.1938</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:left">0.4572</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">0.2400</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:left">0.5926</td>
+<td style="text-align:center">17</td>
+<td style="text-align:center">0.2906</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:left">0.6794</td>
+<td style="text-align:center">18</td>
+<td style="text-align:center">0.3460</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:left">0.1589</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">0.4072</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:left">0.2276</td>
+<td style="text-align:center">20</td>
+<td style="text-align:center">0.4678</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:left">0.2710</td>
+<td style="text-align:center">21</td>
+<td style="text-align:center">0.4514</td>
+</tr>
+<tr>
+<td style="text-align:center">10</td>
+<td style="text-align:left">0.3450</td>
+<td style="text-align:center">22</td>
+<td style="text-align:center">0.5096</td>
+</tr>
+<tr>
+<td style="text-align:center">11</td>
+<td style="text-align:left">0.4049</td>
+<td style="text-align:center">23</td>
+<td style="text-align:center">0.5103</td>
+</tr>
+<tr>
+<td style="text-align:center">12</td>
+<td style="text-align:left">0.2065</td>
+<td style="text-align:center">24</td>
+<td style="text-align:center">0.5661</td>
+</tr>
+</tbody>
+</table>
 <p><img src="../../../../image/asset-allocation/3.jpg" alt="Autocorrelation Plot"></p>
 
       
