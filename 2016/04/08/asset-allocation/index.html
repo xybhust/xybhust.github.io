@@ -92,11 +92,14 @@
 <p>In our simulations the long memory is a <strong>30 week moving average</strong> and the short memory is either the <strong>current price (MA)</strong> or a <strong>10 week moving average (MA2)</strong>.</p>
 </li>
 </ol>
-<h2 id="Simulation-Configuration"><a href="#Simulation-Configuration" class="headerlink" title="Simulation Configuration"></a>Simulation Configuration</h2><ol>
-<li>Market return and volatility is randomly drawn from uniform distribution in order to cover as many market scenarios as possible.<br>$$ \mu \sim U\left(-0.3, 0.3 \right) \\<br>\sigma \sim U\left(0.1, 0.3 \right) $$</li>
+<h2 id="Simulation-Process"><a href="#Simulation-Process" class="headerlink" title="Simulation Process"></a>Simulation Process</h2><ol>
+<li>Annual market return and volatility is drawn from uniform distribution in order to cover as many market scenarios as possible.<br>$$ \mu \sim U\left(-0.3, 0.3 \right) \\<br>\sigma \sim U\left(0.1, 0.3 \right) $$</li>
 <li>Generate 360 normally distributed weekly returns from $N\left(\frac{\mu}{52}, \frac{\sigma}{\sqrt{52}} \right)$. Also assume $r = 0.03$, $K = S_0 = A_0$.</li>
 <li>Transaction cost are taken into account in two ways: in the form of a cost proportional to the value traded $c = 0.3%$ and as a correction to the option volatility according to Leland (1985) formula:<br>$$ \sigma_{adj}^2 = \sigma^2\left(1 + c\frac{\sqrt{2/\pi}}{\sigma\sqrt{\Delta t}} \right ) $$</li>
+<li>The 8 strategies are implemented over $T = 260$ rolling window and the first 100 data is used to estimate volatility for the option based strategies.</li>
+<li>Repeat step 1-4 for 10000 times and record results for each simulation.</li>
 </ol>
+<h2 id="Preliminary-Test"><a href="#Preliminary-Test" class="headerlink" title="Preliminary Test"></a>Preliminary Test</h2><p>Random number generation is a crucial step in our simulation. To implement the Monte-Carlo simulation properly, two important assumptions must be guaranteed, which is the normality and independence of the time series data. To justify these assumptions, the normality test and independence test must be carried out with actual market data in order to verify if the simulation setup can be approximately compared with the data generating mechanism of real situations.</p>
 
       
     </div>
