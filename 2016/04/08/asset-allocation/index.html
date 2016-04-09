@@ -77,7 +77,7 @@
 <h2 id="Strategies"><a href="#Strategies" class="headerlink" title="Strategies"></a>Strategies</h2><ol>
 <li>Buy and Hold: simplest strategy, no need for explanation.</li>
 <li>Constant Mix: keep the market value proportion of the risky assets and riskless assets constant.</li>
-<li><a href="http://www.investopedia.com/terms/c/cppi.asp" target="_blank" rel="external">Constant Proportion Portfolio Insurance</a>:<br>Suppose $E_t$ is the value of the risky assets at time $t$, and $A_t$ is the total value of the portfolio, then the proportion invested in risky assets is defined as<br>\begin{equation}<br>E_t = \begin{cases}<br> m\left(A_t - E_t \right), &amp; \text{if $A_t &gt; F_t$} \\<br> 0, &amp; \text{if $A_t \leq F_t$}<br>\end{cases}<br>\end{equation}</li>
+<li><a href="http://www.investopedia.com/terms/c/cppi.asp" target="_blank" rel="external">Constant Proportion Portfolio Insurance</a>:<br>Suppose $E_t$ is the value of the risky assets at time $t$, and $A_t$ is the total value of the portfolio, then the proportion invested in risky assets is defined as<br>\begin{equation}<br>E_t = \begin{cases}<br> m\left(A_t - F_t \right), &amp; \text{if $A_t &gt; F_t$} \\<br> 0, &amp; \text{if $A_t \leq F_t$}<br>\end{cases}<br>\end{equation}<br>where $F_t$ is the floor at time $t$. In this case the floor is defined to be $F_t = Ke^{-r\left(T - t \right )}$, where $K$ is the floor at time $T$.</li>
 </ol>
 
       
