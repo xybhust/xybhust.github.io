@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.yibingxie.com/2016/03/28/quick-sort/</loc>
+    
+    <lastmod>2016-04-16T02:45:26.741Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.yibingxie.com/2016/04/08/asset-allocation/</loc>
     
     <lastmod>2016-04-16T02:16:19.320Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>http://blog.yibingxie.com/2016/04/08/eco-review-2/</loc>
     
     <lastmod>2016-04-09T20:42:38.431Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.yibingxie.com/2016/03/28/quick-sort/</loc>
-    
-    <lastmod>2016-03-30T07:38:55.498Z</lastmod>
     
   </url>
   
