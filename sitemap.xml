@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.yibingxie.com/2016/04/21/polymorphism/</loc>
+    
+    <lastmod>2016-04-21T16:31:37.559Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.yibingxie.com/2016/04/21/dynamic-memory/</loc>
     
     <lastmod>2016-04-21T16:02:14.258Z</lastmod>
