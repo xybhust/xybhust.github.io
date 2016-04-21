@@ -78,18 +78,18 @@
 <p>In this case, no matter wether the <code>display()</code> in the parent class (<code>account</code>) is <em>virtual</em> or not, the output is “credit”.</p>
 <p>However, things will become more complicated in the following case<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">account* ac;</span><br><span class="line">credit cc;</span><br><span class="line">ac = &amp;cc;</span><br><span class="line">ac-&gt;display();</span><br></pre></td></tr></table></figure></p>
 <ol>
-<li>If <code>display()</code> in the parent class (<code>account</code>) is <em>virtual</em>:</li>
-</ol>
+<li><p>If <code>display()</code> in the parent class (<code>account</code>) is <em>virtual</em>:</p>
 <ul>
 <li>If the inherited class has the same member function, then the output is “credit”.</li>
 <li>If the inherited class doesn’t have the same member function, then the output is “account”.</li>
 </ul>
-<ol>
-<li>If <code>display()</code> in the parent class (<code>account</code>) is NOT <em>virtual</em>:</li>
-</ol>
+</li>
+<li><p>If <code>display()</code> in the parent class (<code>account</code>) is NOT <em>virtual</em>:</p>
 <ul>
 <li>No matter whether the inherited class override the member function or not, the output is “account”.</li>
 </ul>
+</li>
+</ol>
 <h2 id="Case-2-references"><a href="#Case-2-references" class="headerlink" title="Case 2: references"></a>Case 2: references</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">display</span><span class="params">(account&amp; ac)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    ac.display();</span><br><span class="line">&#125;</span><br><span class="line">display(cc);</span><br></pre></td></tr></table></figure>
 <p>The analysis is the same as above. </p>
 <p>For <strong>pure virtual member function</strong>， there is only declaration and no definition. The abstract class cannot be instantiated. Besides, the child class will inherit the PVMF and will be a abstract class again if it is not defined in the child class. </p>
