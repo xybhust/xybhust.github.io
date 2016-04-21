@@ -72,20 +72,8 @@
     </header>
     <div class="entry">
       
-        <p>Simple illustration of the reference to a pointer in C++.<br><a id="more"></a><br>```c++</p>
-<p>#include <iostream></iostream></p>
-<p>int main (void) {</p>
-<pre><code>int a(10);
-int* j = &amp;a;
-int b(20);
-int*&amp; k = j; // reference to the pointer j
-k = &amp;b; // the address in pointer j also changes
-
-std::cout &lt;&lt; &quot;*k = &quot; &lt;&lt; *k &lt;&lt;std::endl; // output := 20
-std::cout &lt;&lt; &quot;*j = &quot; &lt;&lt; *j &lt;&lt;std::endl; // output := 20
-
-return 0;
-</code></pre><p>}<br>Again, if we change <code>int*&amp; k = j</code> to <code>int* k = j</code>, then changing the address <code>k</code> points to will not have any effect on <code>j</code>. Therefore, the output would be 20 and 10, respectively.</p>
+        <p>Simple illustration of the reference to a pointer in C++.<br><a id="more"></a><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">a</span><span class="params">(<span class="number">10</span>)</span></span>;</span><br><span class="line">    <span class="keyword">int</span>* j = &amp;a;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">b</span><span class="params">(<span class="number">20</span>)</span></span>;</span><br><span class="line">    <span class="keyword">int</span>*&amp; k = j; <span class="comment">// reference to the pointer j</span></span><br><span class="line">    k = &amp;b; <span class="comment">// the address in pointer j also changes</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"*k = "</span> &lt;&lt; *k &lt;&lt;<span class="built_in">std</span>::<span class="built_in">endl</span>; <span class="comment">// output := 20</span></span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"*j = "</span> &lt;&lt; *j &lt;&lt;<span class="built_in">std</span>::<span class="built_in">endl</span>; <span class="comment">// output := 20</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Again, if we change <code>int*&amp; k = j</code> to <code>int* k = j</code>, then changing the address <code>k</code> points to will not have any effect on <code>j</code>. Therefore, the output would be 20 and 10, respectively.</p>
 
       
     </div>
