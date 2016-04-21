@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Nice to meet you | Yibing Xie</title>
+  <title>Reference to a pointer | Yibing Xie</title>
   <meta name="author" content="Yibing Xie">
   
-  <meta name="description" content="Welcome to my blog! This is where I share my study notes, code implementations and whatever crossing my mind. Comments and advices are deeply apprecia">
+  <meta name="description" content="Simple illustration of the reference to a pointer in C++.">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Nice to meet you"/>
+  <meta property="og:title" content="Reference to a pointer"/>
   <meta property="og:site_name" content="Yibing Xie"/>
 
   
@@ -62,18 +62,30 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2016-03-27T18:40:36.000Z"><a href="/2016/03/27/hello-world/">2016-03-27</a></time>
+        <time datetime="2016-04-21T15:25:46.000Z"><a href="/2016/04/21/reference-of-pointer/">2016-04-21</a></time>
       
       
   
-    <h1 class="title">Nice to meet you</h1>
+    <h1 class="title">Reference to a pointer</h1>
   
 
     </header>
     <div class="entry">
       
-        <p>Welcome to my blog! This is where I share my study notes, code implementations and whatever crossing my mind. Comments and advices are deeply appreciated, if any. </p>
-<p>See you later.</p>
+        <p>Simple illustration of the reference to a pointer in C++.<br><a id="more"></a><br>```c++</p>
+<p>#include <iostream></iostream></p>
+<p>int main (void) {</p>
+<pre><code>int a(10);
+int* j = &amp;a;
+int b(20);
+int*&amp; k = j; // reference to the pointer j
+k = &amp;b; // the address in pointer j also changes
+
+std::cout &lt;&lt; &quot;*k = &quot; &lt;&lt; *k &lt;&lt;std::endl; // output := 20
+std::cout &lt;&lt; &quot;*j = &quot; &lt;&lt; *j &lt;&lt;std::endl; // output := 20
+
+return 0;
+</code></pre><p>}<br>Again, if we change <code>int*&amp; k = j</code> to <code>int* k = j</code>, then changing the address <code>k</code> points to will not have any effect on <code>j</code>. Therefore, the output would be 20 and 10, respectively.</p>
 
       
     </div>
@@ -83,7 +95,7 @@
         
   
   <div class="tags">
-    <a href="/tags/Notes/">Notes</a>
+    <a href="/tags/C/">C++</a>
   </div>
 
         
