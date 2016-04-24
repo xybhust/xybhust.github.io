@@ -3,13 +3,15 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2016/3 | Yibing Xie</title>
+  <title>Formula for VaR and CVaR | Yibing Xie</title>
   <meta name="author" content="Yibing Xie">
+  
+  <meta name="description" content="Study notes of VaR and CVaR calculations.">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="Formula for VaR and CVaR"/>
   <meta property="og:site_name" content="Yibing Xie"/>
 
   
@@ -54,49 +56,53 @@
 <div class="clearfix"></div>
 </header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-<h2 class="archive-title">2016/3</h2>
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2016-04-24T00:49:15.000Z"><a href="/2016/04/23/var/">2016-04-23</a></time>
+      
+      
+  
+    <h1 class="title">Formula for VaR and CVaR</h1>
+  
 
+    </header>
+    <div class="entry">
+      
+        <p>Study notes of VaR and CVaR calculations.<br><a id="more"></a><br>Suppose $r_t = \text{ln}P_t - \text{ln}P_{t-1} = p_t - p_{t-1}$, RiskMetrics assumes that $r_t|F_{t-1} \sim N\left(\mu_t, \sigma_t^2 \right )$, where $\mu_t$ is the conditional mean and $\sigma_t^2$ isthe conditional variance of $r_t$. In addition, the method assumes that the two quantities evolve over time according to the simple model:<br>$$ \mu = 0, \qquad \sigma_t = \alpha \sigma_{t-1}^2 + (1-\alpha)r_{t-1}^2, \qquad 0 &lt; \alpha &lt; 1 $$</p>
 
-  <div class="archive">
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <div class="icon"></div>
-            <time datetime="2016-03-30T07:32:33.000Z"><a href="/2016/03/30/merge-sort/">2016-03-30</a></time>
-            
-              <h1 class="title"><a href="/2016/03/30/merge-sort/">Merge Sort</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <div class="icon"></div>
-            <time datetime="2016-03-28T06:46:10.000Z"><a href="/2016/03/28/quick-sort/">2016-03-28</a></time>
-            
-              <h1 class="title"><a href="/2016/03/28/quick-sort/">Quicksort</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <div class="icon"></div>
-            <time datetime="2016-03-27T18:40:36.000Z"><a href="/2016/03/27/hello-world/">2016-03-27</a></time>
-            
-              <h1 class="title"><a href="/2016/03/27/hello-world/">Nice to meet you</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
+      
+    </div>
+    <footer>
+      
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/Time-Series-Analysis/">Time Series Analysis</a>
   </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">Comments</h1>
+
+  
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+  
+</section>
+
 </div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
@@ -151,7 +157,7 @@ var disqus_shortname = 'yibingxie';
   var dsq = document.createElement('script');
   dsq.type = 'text/javascript';
   dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 }());
 </script>
