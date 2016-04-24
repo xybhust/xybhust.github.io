@@ -72,7 +72,8 @@
     </header>
     <div class="entry">
       
-        <p>Study notes of VaR and CVaR calculations.<br><a id="more"></a><br>Suppose $r_t = \text{ln}P_t - \text{ln}P_{t-1} = p_t - p_{t-1}$, RiskMetrics assumes that $r_t|F_{t-1} \sim N\left(\mu_t, \sigma_t^2 \right )$, where $\mu_t$ is the conditional mean and $\sigma_t^2$ isthe conditional variance of $r_t$. In addition, the method assumes that the two quantities evolve over time according to the simple model:<br>$$ \mu = 0, \qquad \sigma_t = \alpha \sigma_{t-1}^2 + (1-\alpha)r_{t-1}^2, \qquad 0 &lt; \alpha &lt; 1 $$</p>
+        <p>Study notes of VaR and CVaR calculations.<br><a id="more"></a><br>Suppose $r_t = \text{ln}P_t - \text{ln}P_{t-1} = p_t - p_{t-1} = sigma_t\epsilon_t$, RiskMetrics assumes that $r_t|F_{t-1} \sim N\left(\mu_t, \sigma_t^2 \right )$, where $\mu_t$ is the conditional mean and $\sigma_t^2$ isthe conditional variance of $r_t$. In addition, the method assumes that the two quantities evolve over time according to the simple model:<br>$$ \mu = 0, \qquad \sigma_t = \alpha \sigma_{t-1}^2 + (1-\alpha)r_{t-1}^2, \qquad 0 &lt; \alpha &lt; 1 $$<br>Therefore, the model assumes that the daily log return is an $\text{IGARCH}(1, 1)$ process without drift. </p>
+<p>Suppose $r_t[k] = r_{t+1} + \cdots + r_{t+k}$, the conditional distribution $r_t[k]|F_t$ is normal with mean zero and variance $\sigma_t^2[k]$. Using the independence assumption of $\epsilon_t$ we have<br>$$ \sigma_t^2[k] = \text{Var}\left(r_t[k]|F_t \right ) = \sum_{i=1}^k\text{Var}\left(r_{t+i}|F_t \right ) $$</p>
 
       
     </div>
