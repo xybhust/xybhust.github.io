@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.yibingxie.com/2016/04/08/asset-allocation/</loc>
+    
+    <lastmod>2016-06-06T15:26:10.275Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.yibingxie.com/2016/03/27/algorithm-analysis/</loc>
     
     <lastmod>2016-06-06T14:10:26.794Z</lastmod>
@@ -9,23 +16,16 @@
   </url>
   
   <url>
+    <loc>http://blog.yibingxie.com/2016/04/09/eco-review-3/</loc>
+    
+    <lastmod>2016-06-06T14:08:43.916Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.yibingxie.com/2016/04/23/var/</loc>
     
     <lastmod>2016-06-06T12:52:48.075Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.yibingxie.com/2016/04/09/eco-review-3/</loc>
-    
-    <lastmod>2016-05-29T15:16:18.800Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.yibingxie.com/2016/04/08/asset-allocation/</loc>
-    
-    <lastmod>2016-05-05T23:03:15.040Z</lastmod>
     
   </url>
   
