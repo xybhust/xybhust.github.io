@@ -3,15 +3,16 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Spectral decomposition, Cholesky decomposition | Yibing Xie</title>
+  <title>entropy | Yibing Xie</title>
   <meta name="author" content="Yibing Xie">
   
-  <meta name="description" content="No proof, only conclusions.">
+  <meta name="description" content="Let $H(x)$ denote the entropy of the random variable $x$, which measures the uncertainty of $x$.
+Discrete Variables$$ H(x) = -\sum_{i}p(x_i)\ln{p(x_i)">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Spectral decomposition, Cholesky decomposition"/>
+  <meta property="og:title" content="entropy"/>
   <meta property="og:site_name" content="Yibing Xie"/>
 
   
@@ -62,19 +63,29 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2016-04-17T19:14:06.000Z"><a href="/2016/04/17/matrix-decomposition/">2016-04-17</a></time>
+        <time datetime="2016-06-06T15:52:45.000Z"><a href="/2016/06/06/entropy/">2016-06-06</a></time>
       
       
   
-    <h1 class="title">Spectral decomposition, Cholesky decomposition</h1>
+    <h1 class="title">entropy</h1>
   
 
     </header>
     <div class="entry">
       
-        <p>No proof, only conclusions.<br><a id="more"></a><br><strong>Spectral decomposition</strong> is the factorization of a matrix into a canonical form, whereby the matrix is represented in terms of its eigenvalues and eigenvectors. Only <strong>diagonalizable matrices</strong> can be factorized in this way. <strong>Symmetric matrices</strong> must be diagonalizable matrices.<br>$$ \boldsymbol{A} = \sum_{i=1}^n{\lambda_i\boldsymbol{e}_i\boldsymbol{e}_i^T} $$<br>or<br>$$ \boldsymbol{A} = \boldsymbol{P\Lambda P}^T $$<br>where $\boldsymbol{\Lambda}$ is a diagonal matrix consisting of all eigenvalues of $\boldsymbol{A}$ and $\boldsymbol{P}$ is an $n\times n$ matrix consisting of the $n$ eigenvectors as columns.</p>
-<p><strong>Cholesky decomposition</strong><br>For a symmetric matrix $\boldsymbol{A}$, there exists a lower triangular matrix $\boldsymbol{L}$ with diagonal elements being <strong>1</strong> and a diagonal matrix $\boldsymbol{G}$ such that $\boldsymbol{A} = \boldsymbol{LGL}^T$. </p>
-<p>If $\boldsymbol{A}$ is <strong>positive definite</strong>, then the diagonal elements of $\boldsymbol{G}$ are positive. In this case, we have<br>$$ \boldsymbol{A} = \boldsymbol{L}\sqrt{\boldsymbol{G}}\sqrt{\boldsymbol{G}}\boldsymbol{L}^T = (\boldsymbol{L}\sqrt{\boldsymbol{G}})(\boldsymbol{L}\sqrt{\boldsymbol{G}})^T $$<br>where $\boldsymbol{L}\sqrt{\boldsymbol{G}}$ is again a lower triangular matrix and the square root is taken element by element.</p>
+        <a id="more"></a>
+<p>Let $H(x)$ denote the entropy of the random variable $x$, which measures the uncertainty of $x$.</p>
+<h2 id="Discrete-Variables"><a href="#Discrete-Variables" class="headerlink" title="Discrete Variables"></a>Discrete Variables</h2><p>$$ H(x) = -\sum_{i}p(x_i)\ln{p(x_i)} $$</p>
+<p>Maximizing $H(x)$ subject to $\sum_{i}p(x_i)=1$ using Lagrange mulplier gives<br>$$ p(x_i) = \frac{1}{M}, $$<br>where $M$ is the number of possible values.</p>
+<h2 id="Continuous-Variables"><a href="#Continuous-Variables" class="headerlink" title="Continuous Variables"></a>Continuous Variables</h2><p>Let’s specify a continuous random variable by preserving the first and second moments of the variable, which is $\mu$ and $\sigma$. Namely,<br>$$ \int_{\infty}^{infty}p(x)dx = 1 $$<br>$$ \int_{\infty}^{infty}xp(x)dx = \mu $$<br>$$ \int_{\infty}^{infty}(x - \mu)^2p(x)dx = \sigma^2. $$</p>
+<p>Then,<br>$$ H(x) = \int_{-\infty}^{\infty}p(x)\ln{p(x)}dx. $$<br>Maximazing $H(x)$ subject to the previous three constraints using Lagrange mulplier gives<br>$$ p(x) = \frac{1}{\left(2\pi\sigma^2 \right )^{1/2}}\exp\left{-\frac{(x-\mu)^2}{2\sigma^2} \right }, $$<br>which implies the entropy is maximized when the random variable is Gaussian.</p>
+<h2 id="Conditional-Entropy"><a href="#Conditional-Entropy" class="headerlink" title="Conditional Entropy"></a>Conditional Entropy</h2><p>$$ H(y|x) = \int\int p(y, x)\ln{p(y|x)dydx} $$</p>
+<p>Using the fact that $p(y|x) = \frac{p(y, x)}{p(x)}$ gives the following relation<br>$$ H(x, y) = H(y|x) + H(x). $$</p>
+<h2 id="Relative-Entropy-and-Mutual-Information"><a href="#Relative-Entropy-and-Mutual-Information" class="headerlink" title="Relative Entropy and Mutual Information"></a>Relative Entropy and Mutual Information</h2><p>Consider some unkown distribution $p(x)$, and suppose that we have modelled this using an approximating distribution $q(x)$.<br>\begin{align}<br> KL(p||q) &amp;= -\int p(x)\ln{q(x)}dx - \left(-\int p(x)\ln{p(x)}dx \right )<br>          &amp;= -\int p(x)\ln\left{\frac{q(x)}{p(x)} \right }dx<br>\end{align}</p>
+<p>This is known as <em>relative entropy</em> or <em>Kullback-Leibler divergence</em>.</p>
+<p>\begin{align}<br>I(x, y) &amp;= KL\left(p(x,y)||p(x)p(y) \right ) \\<br>        &amp;= -\int\int p(x, y)\ln\left{\frac{p(x)p(y)}{p(x, y)} \right }dxdy<br>\end{align}</p>
+<p>Using the fact that $\frac{p(x)p(y)}{p(x, y)} = \frac{p(y)}{p(y|x)} = \frac{p(x)}{p(x|y)}$ we have,<br>$$ I(x,y) = H(x) - H(x|y) = H(y) - H(y|x), $$</p>
+<p>which is called the <em>mutual information</em> between variables $x$ and $y$.</p>
 
       
     </div>
@@ -84,7 +95,7 @@
         
   
   <div class="tags">
-    <a href="/tags/Mathematics/">Mathematics</a>
+    <a href="/tags/Statistical-Learning/">Statistical Learning</a>
   </div>
 
         
