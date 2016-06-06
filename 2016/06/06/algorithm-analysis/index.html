@@ -85,6 +85,54 @@
 </li>
 </ol>
 <p>The above relationships can be shown in the following chart.<br><img src="../../../../image/algorithm-analysis/notation.png" alt=""></p>
+<p>  <strong>Rule 1.</strong> If $T_1(N) = O\left(f(N) \right )$ and $T_2(N) = O\left(g(N) \right )$, then</p>
+<pre><code>1. $T\_1(N) + T\_2(N) = O\left(f(N) + g(N) \right )
+2. $T\_1(N) \times T\_2(N) = O\left(f(N) \times g(N) \right )
+</code></pre><p>  <strong>Rule 2.</strong> If $T(N)$ is a polynomial of degree $k$, then $T(N) = \Theta\left(N^k \right )$.</p>
+<p>  <strong>Rule 3.</strong> $\log^k{N} = O(N)$ for any constant $k$. This tells us that logarithms grow very slowly.</p>
+<p>Typical growth rates</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Function</th>
+<th style="text-align:center">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$c$</td>
+<td style="text-align:center">Constant</td>
+</tr>
+<tr>
+<td style="text-align:center">$\log{N}$</td>
+<td style="text-align:center">Logarithmic</td>
+</tr>
+<tr>
+<td style="text-align:center">$\log^2{N}$</td>
+<td style="text-align:center">Log-squared</td>
+</tr>
+<tr>
+<td style="text-align:center">$N$</td>
+<td style="text-align:center">Linear</td>
+</tr>
+<tr>
+<td style="text-align:center">$N\log{N</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">$N^2$</td>
+<td style="text-align:center">Quadratic</td>
+</tr>
+<tr>
+<td style="text-align:center">$N^3$</td>
+<td style="text-align:center">Cubic</td>
+</tr>
+<tr>
+<td style="text-align:center">$2^N$</td>
+<td style="text-align:center">Exponential</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
