@@ -3,15 +3,13 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Spectral decomposition, Cholesky decomposition | Yibing Xie</title>
+  <title>Page 2 | Archives | Yibing Xie</title>
   <meta name="author" content="Yibing Xie">
-  
-  <meta name="description" content="No proof, only conclusions.">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Spectral decomposition, Cholesky decomposition"/>
+  
   <meta property="og:site_name" content="Yibing Xie"/>
 
   
@@ -56,55 +54,25 @@
 <div class="clearfix"></div>
 </header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2016-04-17T19:14:06.000Z"><a href="/2016/04/17/matrix-decomposition/">2016-04-17</a></time>
-      
-      
-  
-    <h1 class="title">Spectral decomposition, Cholesky decomposition</h1>
-  
+    <div id="main-col" class="alignleft"><div id="wrapper">
+<h2 class="archive-title">Archives</h2>
 
-    </header>
-    <div class="entry">
-      
-        <p>No proof, only conclusions.<br><a id="more"></a><br><strong>Spectral decomposition</strong> is the factorization of a matrix into a canonical form, whereby the matrix is represented in terms of its eigenvalues and eigenvectors. Only <strong>diagonalizable matrices</strong> can be factorized in this way. <strong>Symmetric matrices</strong> must be diagonalizable matrices.<br>$$ \boldsymbol{A} = \sum_{i=1}^n{\lambda_i\boldsymbol{e}_i\boldsymbol{e}_i^T} $$<br>or<br>$$ \boldsymbol{A} = \boldsymbol{P\Lambda P}^T $$<br>where $\boldsymbol{\Lambda}$ is a diagonal matrix consisting of all eigenvalues of $\boldsymbol{A}$ and $\boldsymbol{P}$ is an $n\times n$ matrix consisting of the $n$ eigenvectors as columns.</p>
-<p><strong>Cholesky decomposition</strong><br>For a symmetric matrix $\boldsymbol{A}$, there exists a lower triangular matrix $\boldsymbol{L}$ with diagonal elements being <strong>1</strong> and a diagonal matrix $\boldsymbol{G}$ such that $\boldsymbol{A} = \boldsymbol{LGL}^T$. </p>
-<p>If $\boldsymbol{A}$ is <strong>positive definite</strong>, then the diagonal elements of $\boldsymbol{G}$ are positive. In this case, we have<br>$$ \boldsymbol{A} = \boldsymbol{L}\sqrt{\boldsymbol{G}}\sqrt{\boldsymbol{G}}\boldsymbol{L}^T = (\boldsymbol{L}\sqrt{\boldsymbol{G}})(\boldsymbol{L}\sqrt{\boldsymbol{G}})^T $$<br>where $\boldsymbol{L}\sqrt{\boldsymbol{G}}$ is again a lower triangular matrix and the square root is taken element by element.</p>
 
-      
-    </div>
-    <footer>
-      
-        
-        
-  
-  <div class="tags">
-    <a href="/tags/Linear-Algebra/">Linear Algebra</a>
+  <div class="archive">
+    
+      <article class="post">
+        <div class="post-content">
+          <header>
+            <div class="icon"></div>
+            <time datetime="2016-03-27T18:40:36.000Z"><a href="/2016/03/27/hello-world/">2016-03-27</a></time>
+            
+              <h1 class="title"><a href="/2016/03/27/hello-world/">Nice to meet you</a></h1>
+            
+          </header>
+        </div>
+      </article>
+    
   </div>
-
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-<section id="comment">
-  <h1 class="title">Comments</h1>
-
-  
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
-  
-</section>
-
 </div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
@@ -159,7 +127,7 @@ var disqus_shortname = 'yibingxie';
   var dsq = document.createElement('script');
   dsq.type = 'text/javascript';
   dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 }());
 </script>
