@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.yibingxie.com/2016/06/07/cnn-theano/</loc>
+    
+    <lastmod>2016-06-07T16:28:59.927Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.yibingxie.com/2016/06/07/mlp-theano/</loc>
     
     <lastmod>2016-06-07T16:19:30.379Z</lastmod>
