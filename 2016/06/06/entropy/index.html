@@ -6,8 +6,7 @@
   <title>Entropy and mutual information | Yibing Xie</title>
   <meta name="author" content="Yibing Xie">
   
-  <meta name="description" content="Let $H(x)$ denote the entropy of the random variable $x$, which measures the uncertainty of $x$.
-Discrete Variables$$ H(x) = -\sum_{i}p(x_i)\ln{p(x_i)">
+  <meta name="description" content="Notes from PRML.">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -73,8 +72,7 @@ Discrete Variables$$ H(x) = -\sum_{i}p(x_i)\ln{p(x_i)">
     </header>
     <div class="entry">
       
-        <a id="more"></a>
-<p>Let $H(x)$ denote the entropy of the random variable $x$, which measures the uncertainty of $x$.</p>
+        <p>Notes from PRML.<br><a id="more"></a><br>Let $H(x)$ denote the entropy of the random variable $x$, which measures the uncertainty of $x$.</p>
 <h2 id="Discrete-Variables"><a href="#Discrete-Variables" class="headerlink" title="Discrete Variables"></a>Discrete Variables</h2><p>$$ H(x) = -\sum_{i}p(x_i)\ln{p(x_i)} $$</p>
 <p>Maximizing $H(x)$ subject to $\sum_{i}p(x_i)=1$ using Lagrange mulplier gives<br>$$ p(x_i) = \frac{1}{M}, $$<br>where $M$ is the number of possible values.</p>
 <h2 id="Continuous-Variables"><a href="#Continuous-Variables" class="headerlink" title="Continuous Variables"></a>Continuous Variables</h2><p>Let’s specify a continuous random variable by preserving the first and second moments of the variable, which is $\mu$ and $\sigma$. Namely,<br>$$ \int_{-\infty}^{\infty}p(x)dx = 1 $$<br>$$ \int_{-\infty}^{\infty}xp(x)dx = \mu $$<br>$$ \int_{-\infty}^{\infty}(x - \mu)^2p(x)dx = \sigma^2. $$</p>
