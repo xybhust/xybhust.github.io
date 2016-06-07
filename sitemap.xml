@@ -2,7 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://blog.yibingxie.com/2016/06/07/logistic-regression/</loc>
+    <loc>http://blog.yibingxie.com/2016/06/07/mlp-theano/</loc>
+    
+    <lastmod>2016-06-07T16:18:04.804Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.yibingxie.com/2016/06/07/logistic-theano/</loc>
     
     <lastmod>2016-06-07T15:33:27.445Z</lastmod>
     
