@@ -3,13 +3,15 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Projects | Yibing Xie</title>
+  <title>Principal components analysis | Yibing Xie</title>
   <meta name="author" content="Yibing Xie">
+  
+  <meta name="description" content="Simple notes about PCA.">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="Principal components analysis"/>
   <meta property="og:site_name" content="Yibing Xie"/>
 
   
@@ -54,25 +56,55 @@
 <div class="clearfix"></div>
 </header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-<h2 class="archive-title tag">Projects</h2>
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2016-07-05T15:44:59.000Z"><a href="/2016/07/05/pca/">2016-07-05</a></time>
+      
+      
+  
+    <h1 class="title">Principal components analysis</h1>
+  
 
+    </header>
+    <div class="entry">
+      
+        <p>Simple notes about PCA.<br><a id="more"></a><br>PCA can be defined as the orthogonal projection of the data onto a lower dimensional linear space, known as the <em>principal subspace</em>, such that the variance of the projected data is maximized. The resulting vectors are uncorrelated.</p>
+<p>Suppose we have dataset $\mathbf{X}$, where the rows represents examples and the columns stand for features. Then the projected data is defined to be<br>$$ \mathbf{X}\mathbf{U}, $$<br>where the columns of $\mathbf{U}$ are the eigenvectors of the covariance matrix of $\mathbf{X}$, denoted as $\mathbf{S}$.</p>
+<p>Therefore, the new feature vectors are $z_1 = \mathbf{X}u_1$, $_2 = \mathbf{X}u_2$, $_3 = \mathbf{X}u_3$, respectively. Consider any two vectors, we have<br>$$ z_i^Tz_j = \left(\mathbf{X}u_i \right)^T\mathbf{X}u_j = u_i^T\mathbf{X}^T\mathbf{X}u_j = (n-1)u_i^T\mathbf{S}u_j = (n-1)u_i^T\lambda_ju_j = 0. $$</p>
 
-  <div class="archive">
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <div class="icon"></div>
-            <time datetime="2016-04-08T14:21:51.000Z"><a href="/2016/04/08/asset-allocation/">2016-04-08</a></time>
-            
-              <h1 class="title"><a href="/2016/04/08/asset-allocation/">Dynamic asset allocation - a Monte Carlo approach</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
+      
+    </div>
+    <footer>
+      
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/Statistical-Learning/">Statistical Learning</a>
   </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">Comments</h1>
+
+  
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+  
+</section>
+
 </div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
@@ -152,7 +184,7 @@ var disqus_shortname = 'yibingxie';
   var dsq = document.createElement('script');
   dsq.type = 'text/javascript';
   dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 }());
 </script>
