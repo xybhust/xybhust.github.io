@@ -73,8 +73,8 @@
     <div class="entry">
       
         <p>Simple notes about PCA.<br><a id="more"></a><br>PCA can be defined as the orthogonal projection of the data onto a lower dimensional linear space, known as the <em>principal subspace</em>, such that the variance of the projected data is maximized. The resulting vectors are uncorrelated.</p>
-<p>Suppose we have dataset $\mathbf{X}$, where the rows represents examples and the columns stand for features. Then the projected data is defined to be<br>$$ \mathbf{X}\mathbf{U}, $$<br>where the columns of $\mathbf{U}$ are the eigenvectors of the covariance matrix of $\mathbf{X}$, denoted as $\mathbf{S}$.</p>
-<p>Therefore, the new feature vectors are $z_1 = \mathbf{X}u_1$, $_2 = \mathbf{X}u_2$, $_3 = \mathbf{X}u_3$, respectively. Consider any two vectors, we have<br>$$ z_i^Tz_j = \left(\mathbf{X}u_i \right)^T\mathbf{X}u_j = u_i^T\mathbf{X}^T\mathbf{X}u_j = (n-1)u_i^T\mathbf{S}u_j = (n-1)u_i^T\lambda_ju_j = 0. $$</p>
+<p>Suppose we have dataset $\mathit{X}$, where the rows represents examples and the columns stand for features. Then the projected data is defined to be<br>$$ \mathit{X}\mathit{U}, $$<br>where the columns of $\mathit{U}$ are the eigenvectors of the covariance matrix of $\mathit{X}$, denoted as $\mathit{S}$.</p>
+<p>Therefore, the new feature vectors are $z_1 = \mathit{X}u_1$, $_2 = \mathit{X}u_2$, $_3 = \mathit{X}u_3$, respectively. Consider any two vectors, we have<br>$$ z_i^Tz_j = \left(\mathit{X}u_i \right)^T\mathit{X}u_j = u_i^T\mathit{X}^T\mathit{X}u_j = (n-1)u_i^T\mathit{S}u_j = (n-1)u_i^T\lambda_ju_j = 0. $$</p>
 
       
     </div>
