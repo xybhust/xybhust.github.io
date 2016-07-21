@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.yibingxie.com/2016/04/17/matrix-notes/</loc>
+    
+    <lastmod>2016-07-21T04:20:10.217Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.yibingxie.com/2016/06/05/pca/</loc>
     
     <lastmod>2016-07-05T16:10:14.102Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>http://blog.yibingxie.com/2016/06/06/entropy/</loc>
     
     <lastmod>2016-06-07T14:44:56.499Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.yibingxie.com/2016/04/17/matrix-decomposition/</loc>
-    
-    <lastmod>2016-06-06T15:50:52.221Z</lastmod>
     
   </url>
   

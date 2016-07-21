@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Spectral decomposition, Cholesky decomposition | Yibing Xie</title>
+  <title>Notes of linear algebra | Yibing Xie</title>
   <meta name="author" content="Yibing Xie">
   
-  <meta name="description" content="No proof, only conclusions.">
+  <meta name="description" content="Just in case I might forget the very basic linear algebra.">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Spectral decomposition, Cholesky decomposition"/>
+  <meta property="og:title" content="Notes of linear algebra"/>
   <meta property="og:site_name" content="Yibing Xie"/>
 
   
@@ -62,17 +62,23 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2016-04-17T07:14:06.000Z"><a href="/2016/04/17/matrix-decomposition/">2016-04-17</a></time>
+        <time datetime="2016-04-17T07:14:06.000Z"><a href="/2016/04/17/matrix-notes/">2016-04-17</a></time>
       
       
   
-    <h1 class="title">Spectral decomposition, Cholesky decomposition</h1>
+    <h1 class="title">Notes of linear algebra</h1>
   
 
     </header>
     <div class="entry">
       
-        <p>No proof, only conclusions.<br><a id="more"></a><br><strong>Spectral decomposition</strong> is the factorization of a matrix into a canonical form, whereby the matrix is represented in terms of its eigenvalues and eigenvectors. Only <strong>diagonalizable matrices</strong> can be factorized in this way. <strong>Symmetric matrices</strong> must be diagonalizable matrices.<br>$$ \boldsymbol{A} = \sum_{i=1}^n{\lambda_i\boldsymbol{e}_i\boldsymbol{e}_i^T} $$<br>or<br>$$ \boldsymbol{A} = \boldsymbol{P\Lambda P}^T $$<br>where $\boldsymbol{\Lambda}$ is a diagonal matrix consisting of all eigenvalues of $\boldsymbol{A}$ and $\boldsymbol{P}$ is an $n\times n$ matrix consisting of the $n$ eigenvectors as columns.</p>
+        <p>Just in case I might forget the very basic linear algebra.<br><a id="more"></a></p>
+<h2 id="Eigenvalues-and-eigenvectors"><a href="#Eigenvalues-and-eigenvectors" class="headerlink" title="Eigenvalues and eigenvectors**"></a>Eigenvalues and eigenvectors**</h2><p>For a <strong>square matrix</strong> $\boldsymbold{A}$, if we have $\boldsymbol{Ax} = \lambda\boldsymbol{x}$, then $\lambda$ is the eigenvalues and $\boldsymbol{x}$ is the eigenvector.</p>
+<h2 id="Spectral-decomposition"><a href="#Spectral-decomposition" class="headerlink" title="Spectral decomposition"></a>Spectral decomposition</h2><p>Also called eigendecomposition, is the factorization of a matrix into a canonical form, whereby the matrix is represented in terms of its eigenvalues and eigenvectors. Only <strong>diagonalizable matrices</strong> can be factorized in this way. <strong>Symmetric matrices</strong> must be diagonalizable matrices.<br>$$ \boldsymbol{A} = \sum_{i=1}^n{\lambda_i\boldsymbol{e}_i\boldsymbol{e}_i^T} $$<br>or<br>$$ \boldsymbol{A} = \boldsymbol{P\Lambda P}^T $$<br>where $\boldsymbol{\Lambda}$ is a diagonal matrix consisting of all eigenvalues of $\boldsymbol{A}$ and $\boldsymbol{P}$ is an $n\times n$ matrix consisting of the $n$ eigenvectors as columns.</p>
+<h2 id="Positive-definite-matrix"><a href="#Positive-definite-matrix" class="headerlink" title="Positive definite matrix"></a>Positive definite matrix</h2><p>For a $k \times k$ symmetric matrix $\boldsymbol{A}$, if for any vector $boldsymbol{x} \neq 0$ we have,<br>$$ \boldsymbol{x}^T\boldsymbol{Ax} &gt; 0, $$<br>then we say $\boldsymbol{A}$ is positive-definite.</p>
+<p>If $\boldsymbol{A}$ is positive definite, then $boldsymbol{A}^{-1}$ is also positive definite, and the eigenvalues are $\frac{1}{\lambda_i}$, where $\lambda_i$ is the eigenvalue of $boldsymbol{A}$.<br>$$ \boldsymbol{A} = \sum_{i=1}^n{\frac{1}{\lambda_i}\boldsymbol{e}_i\boldsymbol{e}_i^T} $$</p>
+<p>Also, we can define the square root matrix of $boldsymbol{A}$, which is also positive definite and can be written as<br>$$ \boldsymbol{A} = \sum_{i=1}^n{\sqrt{\lambda_i}\boldsymbol{e}_i\boldsymbol{e}_i^T}. $$</p>
+<p>$$ \boldsymbol{A}^{1/2}\boldsymbol{A}^{1/2} = \boldsymbol{A} $$</p>
 <p><strong>Cholesky decomposition</strong><br>For a symmetric matrix $\boldsymbol{A}$, there exists a lower triangular matrix $\boldsymbol{L}$ with diagonal elements being <strong>1</strong> and a diagonal matrix $\boldsymbol{G}$ such that $\boldsymbol{A} = \boldsymbol{LGL}^T$. </p>
 <p>If $\boldsymbol{A}$ is <strong>positive definite</strong>, then the diagonal elements of $\boldsymbol{G}$ are positive. In this case, we have<br>$$ \boldsymbol{A} = \boldsymbol{L}\sqrt{\boldsymbol{G}}\sqrt{\boldsymbol{G}}\boldsymbol{L}^T = (\boldsymbol{L}\sqrt{\boldsymbol{G}})(\boldsymbol{L}\sqrt{\boldsymbol{G}})^T $$<br>where $\boldsymbol{L}\sqrt{\boldsymbol{G}}$ is again a lower triangular matrix and the square root is taken element by element.</p>
 
